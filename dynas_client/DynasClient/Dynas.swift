@@ -138,10 +138,10 @@ class Dynas {
     }
     
     
-    func getDatas(object: DynasObject, filter: String, completion:(cdata: NSDictionary!, cerror: NSError!) -> Void){
+    func getDatas(object: DynasObject, filter: String, completion:(cdata: NSArray!, cerror: NSError!) -> Void){
         addHeader()
         manager.request(.GET, BASE_URL + object.SEARCH_ENDPOINT, parameters: ["entity":object.entity_name, "data":""]).response { (request, response, JSON, error) in
-            
+            //println(JSON)
             if (error != nil) {
                 completion(cdata: nil, cerror: error)
             } else {
@@ -149,7 +149,7 @@ class Dynas {
                     var parseError: NSError?
                     let parsedObject = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
                         options: NSJSONReadingOptions.MutableContainers,
-                        error:&parseError) as? NSDictionary
+                        error:&parseError) as? NSArray
                     
                     if (parseError == nil) {
                             println(parsedObject)

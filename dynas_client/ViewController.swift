@@ -14,14 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    override init() {
-        super.init()
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         checkLogin()
@@ -34,13 +26,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.tableView.addPullToRefresh({ [weak self] in
             
+            self?.tableData.removeAll(keepCapacity: true)
+            
             let nws: News = News()
-            let data = nws.getDatas("")
+            let data = DynasHelper.sharedInstance.getDatas(nws, filter : "")
             
-            println(data)
-            
-            sleep(1)
-            self?.tableView.reloadData()
+            if (data != nil) {
+                for item in data {
+                    let nws = News()
+                    nws.fromJson(item as String)
+                    self?.tableData.append(nws)
+                    println(nws.title)
+                }
+                
+                println(self?.tableData.count)
+                
+                sleep(1)
+                self?.tableView.reloadData()
+            }
         })
 
     }

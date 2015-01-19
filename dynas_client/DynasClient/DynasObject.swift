@@ -8,41 +8,33 @@
 
 import Foundation
 
-class DynasObject {
+class DynasObject : NSObject {
     
     var SEARCH_ENDPOINT : String = "crud_index"
     var CRUD_ENDPOINT : String = "crud_at"
-    let dynas_manager = Dynas.sharedInstance
     
     var id : String = ""
     var entity_name : String = ""
     
-    func getDatas(filter: String) -> NSDictionary!  {
-        var retData: NSDictionary! = nil
-        dynas_manager.getDatas(self, filter: filter) { (cdata, cerror) -> Void in
-            if (cerror == nil) {
-                retData = cdata
-            } else {
-                println(cerror.description)
+    func fromJson(json: String) {
+        var error : NSError?
+        let JSONData = json.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        
+        let JSONDictionary: Dictionary = NSJSONSerialization.JSONObjectWithData(JSONData!, options: nil, error: &error) as NSDictionary
+        
+        // Loop
+        for (key, value) in JSONDictionary {
+            let keyName = key as String
+            let keyValue: String = value as String
+            
+            // If property exists
+            if (self.respondsToSelector(NSSelectorFromString(keyName))) {
+                self.setValue(keyValue, forKey: keyName)
             }
         }
-        return retData
     }
     
-    func getData(id: String) {
-        self.id = id
-        dynas_manager.getData(self)
-    }
-    
-    func saveData() {
-        dynas_manager.saveData(self)
-    }
-    
-    func updateData() {
-        dynas_manager.updateData(self)
-    }
-    
-    func deleteData() {
-        dynas_manager.deleteData(self)
+    func toJson() {
+        
     }
 }

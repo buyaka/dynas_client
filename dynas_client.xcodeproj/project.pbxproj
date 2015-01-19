@@ -11,6 +11,7 @@
 		4319972A1A6D3F0E00CBE987 /* PullToRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */; };
 		4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */; };
 		4319972C1A6D3F0E00CBE987 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */; };
+		4319972E1A6D658E00CBE987 /* DynasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319972D1A6D658E00CBE987 /* DynasHelper.swift */; };
 		433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A21A65117500AFF2E2 /* AppDelegate.swift */; };
 		433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A41A65117500AFF2E2 /* ViewController.swift */; };
 		433DA3A81A65117500AFF2E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433DA3A61A65117500AFF2E2 /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshConst.swift; sourceTree = "<group>"; };
 		431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		4319972D1A6D658E00CBE987 /* DynasHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasHelper.swift; sourceTree = "<group>"; };
 		433DA39D1A65117500AFF2E2 /* dynas_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dynas_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433DA3A11A65117500AFF2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		433DA3A21A65117500AFF2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				433DA3EF1A66A9BB00AFF2E2 /* DynasObject.swift */,
 				433DA3F01A66A9BB00AFF2E2 /* DynasObjectAdView.swift */,
 				433DA3F11A66A9BB00AFF2E2 /* KeychainAccess.swift */,
+				4319972D1A6D658E00CBE987 /* DynasHelper.swift */,
 			);
 			path = DynasClient;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */,
 				433DA3F61A66A9BB00AFF2E2 /* KeychainAccess.swift in Sources */,
 				433DA4011A66AF3B00AFF2E2 /* NSData+Base64.m in Sources */,
+				4319972E1A6D658E00CBE987 /* DynasHelper.swift in Sources */,
 				4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */,
 				43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */,
 				433DA4001A66AF3B00AFF2E2 /* AESCrypt.m in Sources */,
