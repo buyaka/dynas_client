@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		431997291A6D3F0E00CBE987 /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */; };
+		4319972A1A6D3F0E00CBE987 /* PullToRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */; };
+		4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */; };
+		4319972C1A6D3F0E00CBE987 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */; };
+		433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A21A65117500AFF2E2 /* AppDelegate.swift */; };
+		433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A41A65117500AFF2E2 /* ViewController.swift */; };
+		433DA3A81A65117500AFF2E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433DA3A61A65117500AFF2E2 /* Main.storyboard */; };
+		433DA3AA1A65117500AFF2E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433DA3A91A65117500AFF2E2 /* Images.xcassets */; };
+		433DA3AD1A65117500AFF2E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433DA3AB1A65117500AFF2E2 /* LaunchScreen.xib */; };
+		433DA3B91A65117500AFF2E2 /* dynas_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3B81A65117500AFF2E2 /* dynas_clientTests.swift */; };
+		433DA3D11A65146B00AFF2E2 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 433DA3C91A65138F00AFF2E2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		433DA3D51A663B3300AFF2E2 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3D41A663B3300AFF2E2 /* News.swift */; };
+		433DA3F21A66A9BB00AFF2E2 /* Dynas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3ED1A66A9BB00AFF2E2 /* Dynas.swift */; };
+		433DA3F41A66A9BB00AFF2E2 /* DynasObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3EF1A66A9BB00AFF2E2 /* DynasObject.swift */; };
+		433DA3F51A66A9BB00AFF2E2 /* DynasObjectAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3F01A66A9BB00AFF2E2 /* DynasObjectAdView.swift */; };
+		433DA3F61A66A9BB00AFF2E2 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3F11A66A9BB00AFF2E2 /* KeychainAccess.swift */; };
+		433DA4001A66AF3B00AFF2E2 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3F91A66AF3B00AFF2E2 /* AESCrypt.m */; };
+		433DA4011A66AF3B00AFF2E2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FB1A66AF3B00AFF2E2 /* NSData+Base64.m */; };
+		433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */; };
+		433DA4031A66AF3B00AFF2E2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */; };
+		43C7D8251A6B9979004D1419 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8241A6B9979004D1419 /* SigninViewController.swift */; };
+		43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		433DA3B31A65117500AFF2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433DA3951A65117500AFF2E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 433DA39C1A65117500AFF2E2;
+			remoteInfo = dynas_client;
+		};
+		433DA3C81A65138F00AFF2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		433DA3CA1A65138F00AFF2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		433DA3CC1A65138F00AFF2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		433DA3CE1A65143900AFF2E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		433DA3D01A65145400AFF2E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				433DA3D11A65146B00AFF2E2 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
+		431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshConst.swift; sourceTree = "<group>"; };
+		431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		433DA39D1A65117500AFF2E2 /* dynas_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dynas_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		433DA3A11A65117500AFF2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		433DA3A21A65117500AFF2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		433DA3A41A65117500AFF2E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		433DA3A71A65117500AFF2E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		433DA3A91A65117500AFF2E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		433DA3AC1A65117500AFF2E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		433DA3B21A65117500AFF2E2 /* dynas_clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dynas_clientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		433DA3B71A65117500AFF2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		433DA3B81A65117500AFF2E2 /* dynas_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dynas_clientTests.swift; sourceTree = "<group>"; };
+		433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		433DA3D41A663B3300AFF2E2 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		433DA3ED1A66A9BB00AFF2E2 /* Dynas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynas.swift; sourceTree = "<group>"; };
+		433DA3EF1A66A9BB00AFF2E2 /* DynasObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasObject.swift; sourceTree = "<group>"; };
+		433DA3F01A66A9BB00AFF2E2 /* DynasObjectAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasObjectAdView.swift; sourceTree = "<group>"; };
+		433DA3F11A66A9BB00AFF2E2 /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		433DA3F81A66AF3B00AFF2E2 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		433DA3F91A66AF3B00AFF2E2 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		433DA3FA1A66AF3B00AFF2E2 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		433DA3FB1A66AF3B00AFF2E2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		433DA3FC1A66AF3B00AFF2E2 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		433DA3FE1A66AF3B00AFF2E2 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		43C7D8241A6B9979004D1419 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		433DA39A1A65117500AFF2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433DA3AF1A65117500AFF2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		431997241A6D3F0E00CBE987 /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */,
+				431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */,
+				431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */,
+				431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */,
+			);
+			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		433DA3941A65117500AFF2E2 = {
+			isa = PBXGroup;
+			children = (
+				433DA39F1A65117500AFF2E2 /* dynas_client */,
+				433DA3B51A65117500AFF2E2 /* dynas_clientTests */,
+				433DA39E1A65117500AFF2E2 /* Products */,
+				433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		433DA39E1A65117500AFF2E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				433DA39D1A65117500AFF2E2 /* dynas_client.app */,
+				433DA3B21A65117500AFF2E2 /* dynas_clientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433DA39F1A65117500AFF2E2 /* dynas_client */ = {
+			isa = PBXGroup;
+			children = (
+				431997241A6D3F0E00CBE987 /* PullToRefresh */,
+				433DA3EC1A66A9BB00AFF2E2 /* DynasClient */,
+				433DA3A21A65117500AFF2E2 /* AppDelegate.swift */,
+				433DA3A41A65117500AFF2E2 /* ViewController.swift */,
+				433DA3A61A65117500AFF2E2 /* Main.storyboard */,
+				433DA3A91A65117500AFF2E2 /* Images.xcassets */,
+				433DA3AB1A65117500AFF2E2 /* LaunchScreen.xib */,
+				433DA3A01A65117500AFF2E2 /* Supporting Files */,
+				433DA3D41A663B3300AFF2E2 /* News.swift */,
+				43C7D8241A6B9979004D1419 /* SigninViewController.swift */,
+				43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */,
+			);
+			path = dynas_client;
+			sourceTree = "<group>";
+		};
+		433DA3A01A65117500AFF2E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3A11A65117500AFF2E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		433DA3B51A65117500AFF2E2 /* dynas_clientTests */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3B81A65117500AFF2E2 /* dynas_clientTests.swift */,
+				433DA3B61A65117500AFF2E2 /* Supporting Files */,
+			);
+			path = dynas_clientTests;
+			sourceTree = "<group>";
+		};
+		433DA3B61A65117500AFF2E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3B71A65117500AFF2E2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		433DA3C31A65138F00AFF2E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3C91A65138F00AFF2E2 /* Alamofire.framework */,
+				433DA3CB1A65138F00AFF2E2 /* Alamofire.framework */,
+				433DA3CD1A65138F00AFF2E2 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433DA3EC1A66A9BB00AFF2E2 /* DynasClient */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3F71A66AF3B00AFF2E2 /* AESCrypt */,
+				433DA3ED1A66A9BB00AFF2E2 /* Dynas.swift */,
+				433DA3EF1A66A9BB00AFF2E2 /* DynasObject.swift */,
+				433DA3F01A66A9BB00AFF2E2 /* DynasObjectAdView.swift */,
+				433DA3F11A66A9BB00AFF2E2 /* KeychainAccess.swift */,
+			);
+			path = DynasClient;
+			sourceTree = "<group>";
+		};
+		433DA3F71A66AF3B00AFF2E2 /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				433DA3F81A66AF3B00AFF2E2 /* AESCrypt.h */,
+				433DA3F91A66AF3B00AFF2E2 /* AESCrypt.m */,
+				433DA3FA1A66AF3B00AFF2E2 /* NSData+Base64.h */,
+				433DA3FB1A66AF3B00AFF2E2 /* NSData+Base64.m */,
+				433DA3FC1A66AF3B00AFF2E2 /* NSData+CommonCrypto.h */,
+				433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */,
+				433DA3FE1A66AF3B00AFF2E2 /* NSString+Base64.h */,
+				433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */,
+			);
+			path = AESCrypt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		433DA39C1A65117500AFF2E2 /* dynas_client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433DA3BC1A65117500AFF2E2 /* Build configuration list for PBXNativeTarget "dynas_client" */;
+			buildPhases = (
+				433DA3991A65117500AFF2E2 /* Sources */,
+				433DA39A1A65117500AFF2E2 /* Frameworks */,
+				433DA39B1A65117500AFF2E2 /* Resources */,
+				433DA3D01A65145400AFF2E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				433DA3CF1A65143900AFF2E2 /* PBXTargetDependency */,
+			);
+			name = dynas_client;
+			productName = dynas_client;
+			productReference = 433DA39D1A65117500AFF2E2 /* dynas_client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		433DA3B11A65117500AFF2E2 /* dynas_clientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 433DA3BF1A65117500AFF2E2 /* Build configuration list for PBXNativeTarget "dynas_clientTests" */;
+			buildPhases = (
+				433DA3AE1A65117500AFF2E2 /* Sources */,
+				433DA3AF1A65117500AFF2E2 /* Frameworks */,
+				433DA3B01A65117500AFF2E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				433DA3B41A65117500AFF2E2 /* PBXTargetDependency */,
+			);
+			name = dynas_clientTests;
+			productName = dynas_clientTests;
+			productReference = 433DA3B21A65117500AFF2E2 /* dynas_clientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		433DA3951A65117500AFF2E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = demo;
+				TargetAttributes = {
+					433DA39C1A65117500AFF2E2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					433DA3B11A65117500AFF2E2 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 433DA39C1A65117500AFF2E2;
+					};
+				};
+			};
+			buildConfigurationList = 433DA3981A65117500AFF2E2 /* Build configuration list for PBXProject "dynas_client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 433DA3941A65117500AFF2E2;
+			productRefGroup = 433DA39E1A65117500AFF2E2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 433DA3C31A65138F00AFF2E2 /* Products */;
+					ProjectRef = 433DA3C21A65138F00AFF2E2 /* Alamofire.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				433DA39C1A65117500AFF2E2 /* dynas_client */,
+				433DA3B11A65117500AFF2E2 /* dynas_clientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		433DA3C91A65138F00AFF2E2 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 433DA3C81A65138F00AFF2E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		433DA3CB1A65138F00AFF2E2 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 433DA3CA1A65138F00AFF2E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		433DA3CD1A65138F00AFF2E2 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 433DA3CC1A65138F00AFF2E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		433DA39B1A65117500AFF2E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433DA3A81A65117500AFF2E2 /* Main.storyboard in Resources */,
+				433DA3AD1A65117500AFF2E2 /* LaunchScreen.xib in Resources */,
+				433DA3AA1A65117500AFF2E2 /* Images.xcassets in Resources */,
+				431997291A6D3F0E00CBE987 /* pulltorefresharrow.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433DA3B01A65117500AFF2E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		433DA3991A65117500AFF2E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C7D8251A6B9979004D1419 /* SigninViewController.swift in Sources */,
+				4319972C1A6D3F0E00CBE987 /* UIScrollViewExtension.swift in Sources */,
+				433DA4031A66AF3B00AFF2E2 /* NSString+Base64.m in Sources */,
+				433DA3F51A66A9BB00AFF2E2 /* DynasObjectAdView.swift in Sources */,
+				433DA3F41A66A9BB00AFF2E2 /* DynasObject.swift in Sources */,
+				433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */,
+				4319972A1A6D3F0E00CBE987 /* PullToRefreshConst.swift in Sources */,
+				433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */,
+				433DA3D51A663B3300AFF2E2 /* News.swift in Sources */,
+				433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */,
+				433DA3F61A66A9BB00AFF2E2 /* KeychainAccess.swift in Sources */,
+				433DA4011A66AF3B00AFF2E2 /* NSData+Base64.m in Sources */,
+				4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */,
+				43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */,
+				433DA4001A66AF3B00AFF2E2 /* AESCrypt.m in Sources */,
+				433DA3F21A66A9BB00AFF2E2 /* Dynas.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433DA3AE1A65117500AFF2E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433DA3B91A65117500AFF2E2 /* dynas_clientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		433DA3B41A65117500AFF2E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 433DA39C1A65117500AFF2E2 /* dynas_client */;
+			targetProxy = 433DA3B31A65117500AFF2E2 /* PBXContainerItemProxy */;
+		};
+		433DA3CF1A65143900AFF2E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 433DA3CE1A65143900AFF2E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		433DA3A61A65117500AFF2E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				433DA3A71A65117500AFF2E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		433DA3AB1A65117500AFF2E2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				433DA3AC1A65117500AFF2E2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		433DA3BA1A65117500AFF2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		433DA3BB1A65117500AFF2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		433DA3BD1A65117500AFF2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dynas_client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		433DA3BE1A65117500AFF2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dynas_client/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		433DA3C01A65117500AFF2E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = dynas_clientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dynas_client.app/dynas_client";
+			};
+			name = Debug;
+		};
+		433DA3C11A65117500AFF2E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = dynas_clientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dynas_client.app/dynas_client";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		433DA3981A65117500AFF2E2 /* Build configuration list for PBXProject "dynas_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433DA3BA1A65117500AFF2E2 /* Debug */,
+				433DA3BB1A65117500AFF2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433DA3BC1A65117500AFF2E2 /* Build configuration list for PBXNativeTarget "dynas_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433DA3BD1A65117500AFF2E2 /* Debug */,
+				433DA3BE1A65117500AFF2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		433DA3BF1A65117500AFF2E2 /* Build configuration list for PBXNativeTarget "dynas_clientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				433DA3C01A65117500AFF2E2 /* Debug */,
+				433DA3C11A65117500AFF2E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 433DA3951A65117500AFF2E2 /* Project object */;
+}
