@@ -29,7 +29,7 @@ class Dynas {
     let MEMBERID = "1Rfx9V6fEuN9gh"
     let APPID = "1S9oCLkYxgfEF4"
     
-    var BASE_URL : String = "http://api.dynas.mn/v1/"
+    let BASE_URL : String = "http://api.dynas.mn/v1/"
     let manager = Alamofire.Manager.sharedInstance
     
     func addHeader() {
@@ -38,21 +38,7 @@ class Dynas {
             "APPID": APPID
         ]
     }
-    
-    func signin(email: String, password: String, completion:(cdata: NSDictionary!, cerror: NSError!) -> Void) {
-        addHeader()
-        manager.request(.POST, BASE_URL + "signin", parameters: ["email":email, "password": password])
-            .responseJSON() {(request, response, JSON, error) in
-                if (error != nil) {
-                    println(response)
-                    completion(cdata: nil, cerror: error)
-                } else {
-                    completion(cdata: JSON as NSDictionary, cerror: nil)
-                }
-        }
         
-    }
-    
     func signin(email: String, password: String, completion:(cdata: NSDictionary!, cerror: NSError!, cresponse: NSHTTPURLResponse?) -> Void) {
         addHeader()
         manager.request(.POST, BASE_URL + "signin", parameters: ["email":email, "password": password])
@@ -66,23 +52,34 @@ class Dynas {
         
     }
     
-    func signout(email: String, token: String) {
-        addHeader()
-        manager.request(.POST, BASE_URL + "signout", parameters: ["email": email, "token":token])
-            .responseJSON() {(request, response, data, error) in
+    func signout(token: String, completion:(cdata: NSDictionary!, cerror: NSError!) -> Void) {
+        
+        manager.session.configuration.HTTPAdditionalHeaders = [
+            "MEMBERID": MEMBERID,
+            "APPID": APPID,
+            "token": token
+        ]
+
+        manager.request(.POST, BASE_URL + "cleartoken")
+            .responseJSON() {(request, response, JSON, error) in
                 if (error != nil) {
-                    println(error)
+                    completion(cdata: nil, cerror: error)
                 } else {
-                    var err: NSError?
-                    let jsonData: NSData = data as NSData
-                    var jsonResult = NSJSONSerialization.JSONObjectWithData(jsonData, options:NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-                    
-                    if (err != nil) {
-                        println("JSON Error: ¥(err.description)")
+                    if (response?.statusCode == 200) {
+                        var parseError: NSError?
+                        let parsedObject = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
+                            options: NSJSONReadingOptions.MutableContainers,
+                            error:&parseError) as? NSDictionary
+                        
+                        if (parseError == nil) {
+                            completion(cdata: parsedObject, cerror: nil)
+                        } else {
+                            completion(cdata: nil, cerror: parseError)
+                        }
+                    } else {
+                        completion(cdata: nil, cerror: error)
                     }
-                    println(data)
-                }
-        }
+                }        }
         
     }
     
@@ -137,11 +134,10 @@ class Dynas {
         return errorMessage
     }
     
-    
     func getDatas(object: DynasObject, filter: String, completion:(cdata: NSArray!, cerror: NSError!) -> Void){
         addHeader()
         manager.request(.GET, BASE_URL + object.SEARCH_ENDPOINT, parameters: ["entity":object.entity_name, "data":""]).response { (request, response, JSON, error) in
-            //println(JSON)
+            
             if (error != nil) {
                 completion(cdata: nil, cerror: error)
             } else {
@@ -152,8 +148,7 @@ class Dynas {
                         error:&parseError) as? NSArray
                     
                     if (parseError == nil) {
-                            println(parsedObject)
-                            completion(cdata: parsedObject, cerror: nil)
+                        completion(cdata: parsedObject, cerror: nil)
                     } else {
                         completion(cdata: nil, cerror: parseError)
                     }
@@ -164,7 +159,7 @@ class Dynas {
         }
         
     }
-    
+        
     func getData(object: DynasObject) {
         
     }
@@ -178,6 +173,31 @@ class Dynas {
     }
     
     func deleteData(object: DynasObject) {
+        
+    }
+    
+    
+    func getCouponsWithBeacon(beaconUUID: String, completion:(cdata: AnyObject!, cerror: NSError!) -> Void) {
+        addHeader()
+        manager.request(.GET, BASE_URL + "coupons", parameters: ["beacon_uuid":beaconUUID])
+            .responseJSON() {(request, response, JSON, error) in
+                
+                if (error != nil) {
+                    completion(cdata: nil, cerror: error)
+                } else {
+                    var parseError: NSError?
+                    let parsedObject: NSArray = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
+                        options: NSJSONReadingOptions.MutableContainers,
+                        error:&parseError) as NSArray!
+                    
+                    if (parseError == nil) {
+                        completion(cdata: parsedObject, cerror: nil)
+                    } else {
+                        completion(cdata: nil, cerror: parseError)
+                    }
+                }
+                
+        }
         
     }
         

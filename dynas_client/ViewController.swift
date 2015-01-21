@@ -8,49 +8,71 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
-    
-    var tableData = [News]()
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let cellIdentifier = "CELL"
+    var tableData = Array<News>()
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         checkLogin()
     }
     
+    @IBAction func doSignout(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(nil, forKey: "userLoggedIn")
+        defaults.synchronize()
+
+        let loginController: SigninViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SinginViewController") as SigninViewController
+        self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
+            
+        /*
+        Dynas.sharedInstance.signout(token: String, completion: { (cdata, cerror) -> Void in
+            if (cerror == nil) {
+                
+            } else {
+                DynasHelper.sharedInstance.displayAlertMessage("Error", alertDescription: cerror.description)
+            }
+        })
+        */
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
-        
-        self.tableView.addPullToRefresh({ [weak self] in
-            
-            self?.tableData.removeAll(keepCapacity: true)
-            
-            let nws: News = News()
-            let data = DynasHelper.sharedInstance.getDatas(nws, filter : "")
-            
-            if (data != nil) {
-                for item in data {
-                    let nws = News()
-                    nws.fromJson(item as String)
-                    self?.tableData.append(nws)
-                    println(nws.title)
-                }
-                
-                println(self?.tableData.count)
-                
-                sleep(1)
-                self?.tableView.reloadData()
-            }
-        })
-
+        //self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func doRefresh(sender: UIBarButtonItem) {
+        DynasHelper.sharedInstance.showActivityIndicator(self.view)
+        var nws = News()
+        Dynas.sharedInstance.getDatas(nws, filter: "", completion: { (cdata, cerror) -> Void in
+            if (cerror == nil) {
+                if cdata.count > 0 {
+                   self.tableData.removeAll(keepCapacity: false)
+                }
+                
+                for element in cdata {
+                    //TODO: Model serialize move into DynasLibrary
+                    var n = News()
+                    n.title = (element as NSDictionary)["name"] as String
+                    n.id = (element as NSDictionary)["id"] as String
+                    n.content = (element as NSDictionary)["desc"] as String
+                    self.tableData.append(n)
+                }
+                
+                self.tableView.reloadData()
+            } else {
+                DynasHelper.sharedInstance.displayAlertMessage("Error", alertDescription: cerror.description)
+            }
+            DynasHelper.sharedInstance.hideActivityIndicator(self.view)
+            
+        })
+        
+        
     }
     
     func checkLogin() {
@@ -77,11 +99,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.setNavigationItems()
             loadSelfieData()
             }
+            */
             // logout and ask user to sign in again if token is expired
             if comparision != NSComparisonResult.OrderedAscending {
-            loginController.logoutBtnTapped()
+                self.doSignout(self)
             }
-            */
             
         }
     }
@@ -93,7 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         cell.textLabel?.font = UIFont.italicSystemFontOfSize(18)
         cell.textLabel?.textColor = UIColor(red: 44/255, green: 62/255, blue: 88/255, alpha: 1.0)
         let n = tableData[indexPath.row] as News
@@ -101,11 +123,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        self.tableView.fixedPullToRefreshViewForDidScroll()
-    }
-
     
+    /*
+    
+    //Demo for call library function
+    
+    DynasHelper.sharedInstance.showActivityIndicator(self.view)
+    Dynas.sharedInstance.getCouponsWithBeacon("1234567890", completion: { (cdata, cerror) -> Void in
+    
+    println (cdata)
+    self.tableView.reloadData()
+    DynasHelper.sharedInstance.hideActivityIndicator(self.view)
+    
+    })
+    */
     
 }
 

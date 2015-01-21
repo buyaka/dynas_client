@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		431997291A6D3F0E00CBE987 /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */; };
-		4319972A1A6D3F0E00CBE987 /* PullToRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */; };
-		4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */; };
-		4319972C1A6D3F0E00CBE987 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */; };
 		4319972E1A6D658E00CBE987 /* DynasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319972D1A6D658E00CBE987 /* DynasHelper.swift */; };
 		433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A21A65117500AFF2E2 /* AppDelegate.swift */; };
 		433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3A41A65117500AFF2E2 /* ViewController.swift */; };
@@ -28,6 +24,7 @@
 		433DA4011A66AF3B00AFF2E2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FB1A66AF3B00AFF2E2 /* NSData+Base64.m */; };
 		433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */; };
 		433DA4031A66AF3B00AFF2E2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */; };
+		4396A9991A6DF5F2001F339F /* DynasBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396A9981A6DF5F2001F339F /* DynasBannerView.swift */; };
 		43C7D8251A6B9979004D1419 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8241A6B9979004D1419 /* SigninViewController.swift */; };
 		43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -84,10 +81,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
-		431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshConst.swift; sourceTree = "<group>"; };
-		431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
-		431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		4319972D1A6D658E00CBE987 /* DynasHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasHelper.swift; sourceTree = "<group>"; };
 		433DA39D1A65117500AFF2E2 /* dynas_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dynas_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433DA3A11A65117500AFF2E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +106,7 @@
 		433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
 		433DA3FE1A66AF3B00AFF2E2 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		4396A9981A6DF5F2001F339F /* DynasBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasBannerView.swift; sourceTree = "<group>"; };
 		43C7D8241A6B9979004D1419 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,17 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		431997241A6D3F0E00CBE987 /* PullToRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				431997251A6D3F0E00CBE987 /* pulltorefresharrow.png */,
-				431997261A6D3F0E00CBE987 /* PullToRefreshConst.swift */,
-				431997271A6D3F0E00CBE987 /* PullToRefreshView.swift */,
-				431997281A6D3F0E00CBE987 /* UIScrollViewExtension.swift */,
-			);
-			path = PullToRefresh;
-			sourceTree = "<group>";
-		};
 		433DA3941A65117500AFF2E2 = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +151,6 @@
 		433DA39F1A65117500AFF2E2 /* dynas_client */ = {
 			isa = PBXGroup;
 			children = (
-				431997241A6D3F0E00CBE987 /* PullToRefresh */,
 				433DA3EC1A66A9BB00AFF2E2 /* DynasClient */,
 				433DA3A21A65117500AFF2E2 /* AppDelegate.swift */,
 				433DA3A41A65117500AFF2E2 /* ViewController.swift */,
@@ -221,6 +203,7 @@
 		433DA3EC1A66A9BB00AFF2E2 /* DynasClient */ = {
 			isa = PBXGroup;
 			children = (
+				4396A99C1A6DF71D001F339F /* Ad */,
 				433DA3F71A66AF3B00AFF2E2 /* AESCrypt */,
 				433DA3ED1A66A9BB00AFF2E2 /* Dynas.swift */,
 				433DA3EF1A66A9BB00AFF2E2 /* DynasObject.swift */,
@@ -244,6 +227,14 @@
 				433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */,
 			);
 			path = AESCrypt;
+			sourceTree = "<group>";
+		};
+		4396A99C1A6DF71D001F339F /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				4396A9981A6DF5F2001F339F /* DynasBannerView.swift */,
+			);
+			name = Ad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +352,6 @@
 				433DA3A81A65117500AFF2E2 /* Main.storyboard in Resources */,
 				433DA3AD1A65117500AFF2E2 /* LaunchScreen.xib in Resources */,
 				433DA3AA1A65117500AFF2E2 /* Images.xcassets in Resources */,
-				431997291A6D3F0E00CBE987 /* pulltorefresharrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,19 +370,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C7D8251A6B9979004D1419 /* SigninViewController.swift in Sources */,
-				4319972C1A6D3F0E00CBE987 /* UIScrollViewExtension.swift in Sources */,
 				433DA4031A66AF3B00AFF2E2 /* NSString+Base64.m in Sources */,
 				433DA3F51A66A9BB00AFF2E2 /* DynasObjectAdView.swift in Sources */,
+				4396A9991A6DF5F2001F339F /* DynasBannerView.swift in Sources */,
 				433DA3F41A66A9BB00AFF2E2 /* DynasObject.swift in Sources */,
 				433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */,
-				4319972A1A6D3F0E00CBE987 /* PullToRefreshConst.swift in Sources */,
 				433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */,
 				433DA3D51A663B3300AFF2E2 /* News.swift in Sources */,
 				433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */,
 				433DA3F61A66A9BB00AFF2E2 /* KeychainAccess.swift in Sources */,
 				433DA4011A66AF3B00AFF2E2 /* NSData+Base64.m in Sources */,
 				4319972E1A6D658E00CBE987 /* DynasHelper.swift in Sources */,
-				4319972B1A6D3F0E00CBE987 /* PullToRefreshView.swift in Sources */,
 				43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */,
 				433DA4001A66AF3B00AFF2E2 /* AESCrypt.m in Sources */,
 				433DA3F21A66A9BB00AFF2E2 /* Dynas.swift in Sources */,
