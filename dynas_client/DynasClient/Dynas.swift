@@ -183,73 +183,45 @@ class Dynas {
         }
     }
     
-    func saveData(object: DynasObject, params: [String : AnyObject]?, completion:(cdata: NSArray!, cerror: NSError!) -> Void){
+    func saveData(object: DynasObject, params: [String : AnyObject], completion:(cdata: NSDictionary!, cerror: NSError!) -> Void){
         addHeader()
-        manager.request(.POST, BASE_URL + object.SEARCH_ENDPOINT, parameters: params)
+        manager.request(.POST, BASE_URL + object.SEARCH_ENDPOINT, parameters: ["entity":object.entity_name, "data" : params])
             .responseJSON() {(request, response, JSON, error) in
                 
                 if (error != nil) {
                     completion(cdata: nil, cerror: error)
                 } else {
-                    var parseError: NSError?
-                    let parsedObject: NSArray = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
-                        options: NSJSONReadingOptions.MutableContainers,
-                        error:&parseError) as NSArray!
-                    
-                    if (parseError == nil) {
-                        completion(cdata: parsedObject, cerror: nil)
-                    } else {
-                        completion(cdata: nil, cerror: parseError)
-                    }
+                    let obj = JSON as? NSDictionary
+                    completion(cdata: obj, cerror: nil)
                 }
                 
         }
     }
     
-    func updateData(object: DynasObject, params: [String : AnyObject]?, completion:(cdata: NSArray!, cerror: NSError!) -> Void){
-
+    func updateData(object: DynasObject, params: [String : AnyObject], completion:(cdata: NSDictionary!, cerror: NSError!) -> Void){
+        
         addHeader()
-        manager.request(.PUT, BASE_URL + object.CRUD_ENDPOINT, parameters: params)
+        manager.request(.PUT, BASE_URL + object.CRUD_ENDPOINT, parameters: ["entity":object.entity_name, "data" : params])
             .responseJSON() {(request, response, JSON, error) in
-                
                 if (error != nil) {
                     completion(cdata: nil, cerror: error)
                 } else {
-                    var parseError: NSError?
-                    let parsedObject: NSArray = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
-                        options: NSJSONReadingOptions.MutableContainers,
-                        error:&parseError) as NSArray!
-                    
-                    if (parseError == nil) {
-                        completion(cdata: parsedObject, cerror: nil)
-                    } else {
-                        completion(cdata: nil, cerror: parseError)
-                    }
+                    let obj = JSON as? NSDictionary
+                    completion(cdata: obj, cerror: nil)
                 }
-                
         }
     }
     
-    func deleteData(object: DynasObject, completion:(cdata: NSArray!, cerror: NSError!) -> Void){
+    func deleteData(object: DynasObject, params: [String : AnyObject], completion:(cdata: NSDictionary!, cerror: NSError!) -> Void){
         addHeader()
-        manager.request(.DELETE, BASE_URL + object.CRUD_ENDPOINT, parameters: ["id":object.id])
+        manager.request(.DELETE, BASE_URL + object.CRUD_ENDPOINT, parameters: ["entity":object.entity_name, "data" : params])
             .responseJSON() {(request, response, JSON, error) in
-                
                 if (error != nil) {
                     completion(cdata: nil, cerror: error)
                 } else {
-                    var parseError: NSError?
-                    let parsedObject: NSArray = NSJSONSerialization.JSONObjectWithData(JSON as NSData,
-                        options: NSJSONReadingOptions.MutableContainers,
-                        error:&parseError) as NSArray!
-                    
-                    if (parseError == nil) {
-                        completion(cdata: parsedObject, cerror: nil)
-                    } else {
-                        completion(cdata: nil, cerror: parseError)
-                    }
+                    let obj = JSON as? NSDictionary
+                    completion(cdata: obj, cerror: nil)
                 }
-                
         }
     }
     
