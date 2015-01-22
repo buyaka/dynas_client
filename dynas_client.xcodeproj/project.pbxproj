@@ -25,6 +25,8 @@
 		433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FD1A66AF3B00AFF2E2 /* NSData+CommonCrypto.m */; };
 		433DA4031A66AF3B00AFF2E2 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */; };
 		4396A9991A6DF5F2001F339F /* DynasBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396A9981A6DF5F2001F339F /* DynasBannerView.swift */; };
+		43BB19291A701D510018EFA5 /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BB19281A701D510018EFA5 /* newspaper.png */; };
+		43BB199F1A707ADC0018EFA5 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BB199E1A707ADB0018EFA5 /* NewsCell.swift */; };
 		43C7D8251A6B9979004D1419 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8241A6B9979004D1419 /* SigninViewController.swift */; };
 		43C7D8291A6B9ABC004D1419 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,8 @@
 		433DA3FE1A66AF3B00AFF2E2 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		433DA3FF1A66AF3B00AFF2E2 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		4396A9981A6DF5F2001F339F /* DynasBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynasBannerView.swift; sourceTree = "<group>"; };
+		43BB19281A701D510018EFA5 /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper.png; sourceTree = "<group>"; };
+		43BB199E1A707ADB0018EFA5 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		43C7D8241A6B9979004D1419 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +155,7 @@
 		433DA39F1A65117500AFF2E2 /* dynas_client */ = {
 			isa = PBXGroup;
 			children = (
+				43BB19281A701D510018EFA5 /* newspaper.png */,
 				433DA3EC1A66A9BB00AFF2E2 /* DynasClient */,
 				433DA3A21A65117500AFF2E2 /* AppDelegate.swift */,
 				433DA3A41A65117500AFF2E2 /* ViewController.swift */,
@@ -161,6 +166,7 @@
 				433DA3D41A663B3300AFF2E2 /* News.swift */,
 				43C7D8241A6B9979004D1419 /* SigninViewController.swift */,
 				43C7D8281A6B9ABC004D1419 /* SignupViewController.swift */,
+				43BB199E1A707ADB0018EFA5 /* NewsCell.swift */,
 			);
 			path = dynas_client;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				433DA3A81A65117500AFF2E2 /* Main.storyboard in Resources */,
+				43BB19291A701D510018EFA5 /* newspaper.png in Resources */,
 				433DA3AD1A65117500AFF2E2 /* LaunchScreen.xib in Resources */,
 				433DA3AA1A65117500AFF2E2 /* Images.xcassets in Resources */,
 			);
@@ -375,6 +382,7 @@
 				4396A9991A6DF5F2001F339F /* DynasBannerView.swift in Sources */,
 				433DA3F41A66A9BB00AFF2E2 /* DynasObject.swift in Sources */,
 				433DA4021A66AF3B00AFF2E2 /* NSData+CommonCrypto.m in Sources */,
+				43BB199F1A707ADC0018EFA5 /* NewsCell.swift in Sources */,
 				433DA3A51A65117500AFF2E2 /* ViewController.swift in Sources */,
 				433DA3D51A663B3300AFF2E2 /* News.swift in Sources */,
 				433DA3A31A65117500AFF2E2 /* AppDelegate.swift in Sources */,

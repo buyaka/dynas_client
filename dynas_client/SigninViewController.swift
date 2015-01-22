@@ -12,7 +12,6 @@ class SigninViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var activityIndicatorView: UIView!
     
     @IBAction func signinTapped(sender: UIButton) {
         

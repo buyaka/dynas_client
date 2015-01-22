@@ -12,6 +12,7 @@ class News : DynasObject {
     var title : String = String()
     var content : String = String()
     var url : String = String()
+    var type: String = String()
     
     override init() {
         super.init()

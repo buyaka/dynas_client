@@ -14,11 +14,10 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtPasswordRepeat: UITextField!
-    @IBOutlet weak var activityIndicatorView: UIView!
     
     @IBAction func singupTapped(sender: UIButton) {
-        // start activity indicator
-        self.activityIndicatorView.hidden = false
+        
+        DynasHelper.sharedInstance.showActivityIndicator(self.view)
         
         // validate presence of all required parameters
         if countElements(self.txtFullName.text) > 0 && countElements(self.txtEmail.text) > 0 && countElements(self.txtPassword.text) > 0 && countElements(self.txtPasswordRepeat.text) > 0 {
@@ -30,20 +29,20 @@ class SignupViewController: UIViewController {
                     var msg = cdata["message"]! as String
                     var stts = cdata["status"]! as Int
                     if (stts == 200) {
-                        self.displayAlertMessage("Response", alertDescription: msg)
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     } else {
-                        self.displayAlertMessage("Response", alertDescription: msg)
+                        DynasHelper.sharedInstance.displayAlertMessage("Response", alertDescription: msg)
                     }
                 } else {
-                    self.displayAlertMessage("Response", alertDescription: cerror.description)
+                    DynasHelper.sharedInstance.displayAlertMessage("Response", alertDescription: cerror.description)
                 }
             })
             
         } else {
-            self.displayAlertMessage("Parameters Required", alertDescription: "Some of the required parameters are missing")
+            DynasHelper.sharedInstance.displayAlertMessage("Parameters Required", alertDescription: "Some of the required parameters are missing")
         }
         
-        self.activityIndicatorView.hidden = true
+        DynasHelper.sharedInstance.hideActivityIndicator(self.view)
     }
     
     @IBAction func showSigninView(sender: AnyObject) {
@@ -56,13 +55,6 @@ class SignupViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func displayAlertMessage(alertTitle:NSString, alertDescription:NSString) -> Void {
-        // hide activityIndicator view and display alert message
-        self.activityIndicatorView.hidden = true
-        let errorAlert = UIAlertView(title:alertTitle, message:alertDescription, delegate:nil, cancelButtonTitle:"OK")
-        errorAlert.show()
     }
     
 }
