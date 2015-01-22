@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dynas_client/DynasClient/Dynas.swift"
-            timestampString = "443583992.28832"
+            timestampString = "443590200.701246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "getCouponsWithBeacon(_:completion:)"
             landmarkType = "5">
          </BreakpointContent>

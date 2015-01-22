@@ -27,7 +27,8 @@ class Dynas {
     let APPID = "1S9oCLkYxgfEF4"
     let API_KEY = "32486bced1cd18a02577c792cec2983f"
     
-    let BASE_URL : String = "http://api.dynas.mn/v1/"
+    //let BASE_URL : String = "http://api.dynas.mn/v1/"
+    let BASE_URL : String = "http://192.168.100.162/api/v1/"
     let manager = Alamofire.Manager.sharedInstance
     
     func addHeader() {
